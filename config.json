@@ -1,0 +1,12 @@
+{
+    "preseed": {
+        "app_name": "spircd",
+        "version": "0.0.1",
+        "url": "https://dev.pztrn.name/",
+        "auth": 0,
+        "ui": "cli"
+    },
+    "paths": {
+        "regius": "/data/Projects/mygit/regius/regius/"
+    }
+}
