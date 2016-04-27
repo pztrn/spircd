@@ -41,7 +41,7 @@ class SPIrcD:
         """
         """
         self.log(0, "Loading plugins...")
-        for plugin in os.listdir(os.path.join(sys.path[0], "plugins")):
+        for plugin in os.listdir(os.path.join(self.config.get_temp_value("SCRIPT_PATH"), "plugins")):
             self.log(1, "Loading plugin '{CYAN}{plugin_name}{RESET}'...", {"plugin_name": plugin})
             self.loader.request_plugin(plugin)
 
@@ -53,7 +53,6 @@ if __name__ == "__main__":
     # Also, Logger() will also take sys.path[0] for placing logs.
     app_path = os.path.abspath(__file__).split(os.path.sep)[:-1]
     app_path = os.path.sep.join(app_path)
-    sys.path.insert(0, app_path)
 
-    regius = regius.init(preseed)
+    regius = regius.init(preseed, app_path)
     exit(SPIrcD(regius))

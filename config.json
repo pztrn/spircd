@@ -7,6 +7,11 @@
         "ui": "cli"
     },
     "paths": {
-        "regius": "/data/Projects/mygit/regius/regius/"
+        "regius": "/data/Projects/mygit/regius/regius/",
+        "config": "config"
+    },
+    "logger": {
+        "runtime_logs_access": 0,
+        "default_debug_level": 0
     }
 }
